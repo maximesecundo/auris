@@ -1,0 +1,167 @@
+
+/* MIXINS
+---------------------------------------------------------------------------------------------------- */
+
+/* Media Queries
+--------------------------------------------------------- */
+
+// Minimum WIDTH
+@mixin minw($val) {
+    @media only screen and (min-width: $val) {
+        @content;
+    }
+}
+
+// Maximum WIDTH
+@mixin maxw($val) {
+    @media only screen and (max-width: $val) {
+        @content;
+    }
+}
+
+// Minimum HEIGHT
+@mixin minh($val) {
+    @media only screen and (min-height: $val) {
+        @content;
+    }
+}
+
+// Maximum HEIGHT
+@mixin maxh($val) {
+    @media only screen and (max-height: $val) {
+        @content;
+    }
+}
+
+// Minimum WIDTH & Maximum WIDTH
+@mixin minw-maxw($minw, $maxw) {
+    @media only screen and (min-width: $minw) and (max-width: $maxw) {
+        @content;
+    }
+}
+
+// WIDTH: range
+@mixin width-range($minw, $maxw: null) {
+    @if $maxw == null {
+        @include minw($minw) { @content; }
+    }
+
+    @else {
+        @include minw-maxw($minw, $maxw) { @content; }
+    }
+}
+
+// Minimum WIDTH & Maximum HEIGHT
+@mixin minw-maxh($w, $h) {
+    @media only screen and (min-width: $w) and (max-height: $h) {
+        @content;
+    }
+}
+
+// Minimum WIDTH & Minimum HEIGHT
+@mixin minw-minh($w,$h) {
+    @media only screen and (min-width: $w) and (min-height: $h) {
+        @content;
+    }
+}
+
+// Maximum WIDTH & Maximum HEIGHT
+@mixin maxw-maxh($w, $h) {
+    @media only screen and (max-width: $w) and (max-height: $h) {
+        @content;
+    }
+}
+
+// Maximum WIDTH OR Maximum HEIGHT
+@mixin maxw-or-maxh($w, $h) {
+    @media only screen and (max-width: $w), only screen and (max-height: $h) {
+        @content;
+    }
+}
+
+// Maximum WIDTH AND Maximum HEIGHT AND landscape orientation
+@mixin maxw-maxh-landscape($w, $h) {
+    @media only screen and (max-width: $w) and (max-height: $h) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// Min aspect Ratio
+@mixin minratio($val) {
+    @media only screen and (min-aspect-ratio: $val) {
+        @content;
+    }
+}
+
+
+
+
+/* TEXT-RELATED
+---------------------------------------------------------------------------------------------------- */
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+
+
+
+/* ACCESSIBILITY
+---------------------------------------------------------------------------------------------------- */
+
+@mixin visuallyhidden() {
+    overflow: hidden !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+
+
+
+/* SIZING
+---------------------------------------------------------------------------------------------------- */
+
+@mixin ratio($val, $element: div, $offset: 0, $after: false) {
+    position: relative;
+
+    @if $element != none {
+        > #{$element} {
+            @include position(absolute, $offset);
+        }
+    }
+
+    @if $after == false {
+        &::before {
+            content: '';
+
+            display: block;
+            padding-top: $val;
+        }
+    }
+
+    @else {
+        &::after {
+            content: '';
+
+            display: block;
+            padding-top: $val;
+        }
+    }
+}
+
+
+

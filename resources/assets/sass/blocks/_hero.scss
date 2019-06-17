@@ -1,0 +1,70 @@
+/* HERO
+---------------------------------------------------------------------------------------------------- */
+
+/* General
+--------------------------------------------------------- */
+
+.hero {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(100vh - 9.3rem - #{$s-nav-height});
+
+    //Background
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        width: 95.95%;
+        height: 100%;
+
+        background-image: url('/images/background-hero.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center left;
+    }
+
+    @include maxw($bp-mobile-bootstrap) {
+        background-position: center;
+    }
+    //MQ
+    // @include maxw($bp-xx-small-bootstrap) {
+    //     // @include ratio(65.5%,'.hero', 0 0 0 0);
+    //     min-height: calc(100vh - 9.3rem);
+    // }
+
+    // @include maxw($bp-tablet-bootstrap - 1) {
+    //     // @include ratio(85.23%,'.hero', 0 0 0 0);
+    //     min-height: calc(100vh - 9.3rem);
+    // }
+}
+
+.hero__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    z-index: 2;
+
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+}
+
+.hero__inner__title {
+    margin-top: 4.1rem;
+    margin-bottom: 4.1rem;
+
+    //MQ
+    @include maxw($bp-mobile-bootstrap) {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+.hero__inner__link {
+    position: relative;
+}

@@ -1,0 +1,108 @@
+
+/* TYPOGRAPHY
+---------------------------------------------------------------------------------------------------- */
+
+/* Titles
+--------------------------------------------------------- */
+
+
+.title {
+    font-family: $f-leitura;
+
+    &--big {
+        font-size: 6.3rem;
+        line-height: 7rem;
+    }
+
+    &--xl {
+        font-size: 5.5rem;
+        line-height: 3.3rem;
+    }
+
+    &--large {
+        font-size: 4.5rem;
+        line-height: 8.7rem;
+    }
+
+    &--medium {
+        font-size: 4rem;
+        line-height: 5.8rem;
+        color: $c-black;
+    }
+}
+
+.subtitle {
+    font-family: $f-leitura;
+    font-size: 2rem;
+    line-height: 5.8rem;
+    color: $c-dusty-gray;
+}
+
+/* LINKS
+--------------------------------------------------------- */
+
+.link {
+    font-family: $f-lato;
+    font-size: 1.6rem;
+    line-height: 3.3rem;
+
+    opacity: .8;
+
+    // Line
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: calc(50% - .1015rem);
+        left: -7.5rem;
+        width: 5.277rem;
+        height: .203rem;
+
+        background: $c-royal-blue;
+    }
+
+    // Circle
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: calc(50% - 3.795rem);
+        left: -5.5rem;
+        width: 7.29rem;
+        height: 7.59rem;
+
+        border: .135rem solid rgba(74, 74, 74, .13);
+        border-radius: 50%;
+    }
+}
+
+.link-different {
+    display: block;
+
+    width: 23.5rem;
+    height: 6.6rem;
+    padding-left: 5rem;
+
+    font-family: $f-lato;
+    font-size: 1.6rem;
+    line-height: 3.3rem;
+
+    background-color: #fff;
+    border-radius: 3.3rem;
+
+    cursor: pointer;
+
+    // Line
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: -2rem;
+        width: 5.277rem;
+        height: .203rem;
+
+        background: $c-orange;
+    }
+}

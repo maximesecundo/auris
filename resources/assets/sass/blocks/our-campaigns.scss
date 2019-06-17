@@ -1,0 +1,157 @@
+/* OUR-CAMPAIGNS
+---------------------------------------------------------------------------------------------------- */
+
+/* General
+--------------------------------------------------------- */
+
+.our-campaigns {
+    position: relative;
+}
+
+.our-campaigns__subtitle {
+    color: $c-tundora;
+}
+
+.our-campaigns__title {
+    margin-bottom: 7rem;
+}
+
+.our-campaigns__inner__container {
+    display: flex;
+    align-items: center;
+
+    //MQ
+    @include maxw($bp-tablet-bootstrap) {
+        flex-direction: column;
+    }
+}
+
+.our-campaigns__inner__left {
+    position: relative;
+    // margin-left: 5.5rem;
+    padding: 0;
+}
+
+.our-campaigns__inner__capital {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 70.1rem;
+    margin-bottom: 4rem;
+    padding: 5.3rem 6rem 6.1rem 4.3rem;
+
+    color: $c-white;
+
+    background-color: $c-royal-blue;
+
+    &--color {
+        background-color: $c-orange;
+    }
+}
+
+.our-campaigns__capital__block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3.1rem;
+
+    // Circle empty
+    &::before {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 10.3rem);
+        height: 1.9rem;
+        margin-bottom: 6.3rem;
+
+        background: $c-white;
+        border-radius: .8rem;
+        opacity: .13;
+    }
+
+    // Filled Circle
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 15.2rem;
+        height: 1.9rem;
+        margin-bottom: 6.3rem;
+
+        background: $c-seashell;
+        border-radius: .8rem;
+    }
+}
+
+.our-campaigns__capital__block p {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.9rem;
+
+    font-size: 2.5rem;
+}
+
+.our-campaigns__capital__block span {
+    font-size: 1.6rem;
+}
+
+.our-campaigns__capital__goal {
+    margin-right: 2rem;
+}
+
+.our-campaigns__inner__right {
+    margin-left: 1.5rem;
+    padding: 0;
+}
+
+.our-campaigns__inner__different {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 70.1rem;
+    margin-bottom: 4rem;
+    padding: 5.3rem 6rem 6.1rem 4.3rem;
+
+    color: $c-white;
+
+    background-color: $c-orange;
+}
+
+.our-campaigns__capital__different {
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+        width: 34rem;
+        height: 6.6rem;
+        padding-right: 5rem;
+        padding-left: 5rem;
+
+        text-align: center;
+        color: $c-black;
+
+        background-color: $c-white;
+        border-radius: 3.3rem;
+    }
+}
+
+.our-campaigns__capital__header--different {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-align: center;
+    }
+
+    h4 {
+        margin-bottom: 3.4rem;
+    }
+}

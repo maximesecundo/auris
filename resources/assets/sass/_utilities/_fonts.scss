@@ -1,0 +1,78 @@
+
+/* FONTS
+---------------------------------------------------------------------------------------------------- */
+
+/* General
+--------------------------------------------------------- */
+
+@mixin font-face($name, $path, $weight, $style: 'normal') {
+    @font-face {
+        font-family: $name;
+        font-style: $style;
+        font-weight: $weight;
+        src: url($path + '.eot');
+        src: url($path + '.eot?#iefix') format('embedded-opentype'),
+             url($path + '.woff2') format('woff2'),
+             url($path +'.woff') format('woff'),
+             url($path + '.ttf') format('truetype');
+    }
+}
+
+
+
+
+/* Leitura Display Italic
+--------------------------------------------------------- */
+
+
+@font-face {
+    font-family: 'Leitura Display Italic';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../../fonts/leitura-display-italic/LeituraDisplay-Italic.eot?#iefix');
+    src: url('../../fonts/leitura-display-italic/LeituraDisplay-Italic.eot?#iefix') format('eot'),
+         url('../../fonts/leitura-display-italic/LeituraDisplay-Italic.woff2') format('woff2'),
+         url('../../fonts/leitura-display-italic/LeituraDisplay-Italic.woff') format('woff'),
+         url('../../fonts/leitura-display-italic/LeituraDisplay-Italic.ttf') format('truetype');
+}
+
+
+
+/* Lato
+--------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../../fonts/Lato/Lato-Bold.eot?#iefix');
+    src: url('../../fonts/Lato/Lato-Bold.eot?#iefix') format('eot'),
+         url('../../fonts/Lato/Lato-Bold.woff2') format('woff2'),
+         url('../../fonts/Lato/Lato-Bold.woff') format('woff'),
+         url('../../fonts/Lato/Lato-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: regular;
+    font-weight: 500;
+    src: url('../../fonts/Lato/Lato-Regular.eot?#iefix');
+    src: url('../../fonts/Lato/Lato-Regular.eot?#iefix') format('eot'),
+         url('../../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+         url('../../fonts/Lato/Lato-Regular.woff') format('woff'),
+         url('../../fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+
+/* Hk Grotesk
+--------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Hk-Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../fonts/hk-grotesk/HKGrotesk-SemiBold.eot?#iefix');
+    src: url('../../fonts/hk-grotesk/HKGrotesk-SemiBold.eot?#iefix') format('eot'),
+         url('../../fonts/hk-grotesk/HKGrotesk-SemiBold.woff2') format('woff2'),
+         url('../../fonts/hk-grotesk/HKGrotesk-SemiBold.woff') format('woff'),
+         url('../../fonts/hk-grotesk/HKGrotesk-SemiBold.ttf') format('truetype');
+}

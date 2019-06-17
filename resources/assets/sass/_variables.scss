@@ -1,0 +1,78 @@
+
+/* VARIABLES
+---------------------------------------------------------------------------------------------------- */
+
+/* Breakpoints (Linked at Bootstrap with the prefix $bp-example-bootstrap)
+--------------------------------------------------------- */
+
+$bp-xxx-wide:               2561px;
+$bp-xx-wide:                2100px;
+$bp-x-wide:                 1921px;
+$bp-wide:                   1681px;
+
+$bp-grid:                   1694px;
+$bp-medium:                 1441px;
+
+$bp-small:                  1366px;
+$bp-x-small:                1280px;
+$bp-xx-small-bootstrap:     1200px;
+$bp-xxx-small:              1112px;
+
+$bp-tabletL:                1180px;
+$bp-tablet:                 1023px;
+$bp-tabletP:                960px;
+$bp-tablet-bootstrap:       992px;
+
+$bp-mobile-bootstrap:       767px;
+$bp-mobile:                 767px;
+$b-mobile-xs-bootstrap:     576px;
+$bp-x-mobile:               540px;
+$bp-xx-mobile:              360px;
+$bp-xxx-mobile:             350px;
+
+
+
+
+/* Colors (http://chir.ag/projects/name-that-color)
+--------------------------------------------------------- */
+
+// Main
+$c-black:                #000;
+$c-white:                #fff;
+$c-int-orange:           #ff5501;
+$c-mondo:                #40332a;
+$c-gray:                 #898989;
+
+$c-seashell-peach:       #fff4ec;
+$c-vista-white:          #faf6f3;
+$c-wild-sand:            #f4f4f4;
+$c-dusty-gray:           #9b9b9b;
+$c-seashell:             #f1f1f1;
+
+//Links
+$c-tundora:              #4a4a4a;
+$c-royal-blue:           #2a66ee;
+$c-orange:               #ff6e28;
+
+
+/* Fonts
+--------------------------------------------------------- */
+
+$f-system:          -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+$f-helvetica:       $helvetica;
+$f-leitura:         'Leitura Display Italic', $helvetica;
+$f-lato:            'Lato', $helvetica;
+$f-hk-grotesk:      'Hk-Grotesk', $helvetica;
+
+
+
+
+/* Sizes
+--------------------------------------------------------- */
+
+$s-nav-height:           9.7rem;
+// $s-nav-height--mobile:   7.4rem;
+// $s-footer-height:        8.5rem;
+
+
+

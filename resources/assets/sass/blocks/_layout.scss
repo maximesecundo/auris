@@ -1,0 +1,18 @@
+/* LAYOUT
+---------------------------------------------------------------------------------------------------- */
+
+.layout {
+    margin-top: 9.3rem;
+    margin-bottom: 19.1rem;
+
+    &--special-color {
+        background-color: $c-seashell;
+    }
+
+    &--no-margin-top {
+        margin-top: 0;
+        margin-bottom: 16.8rem;
+    }
+}
+
+

@@ -1,0 +1,111 @@
+/* WHY-US
+---------------------------------------------------------------------------------------------------- */
+
+/* GENERAL
+--------------------------------------------------------- */
+
+.why-us__container {
+    display: flex;
+    position: relative;
+    // Deco
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        bottom: -4.2rem;
+        left: 0;
+        width: 32.5rem;
+        height: 42.7rem;
+
+        background-image: url('/images/why-us-deco.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        // MQ
+        @include maxw($bp-tablet-bootstrap) {
+            display: none;
+        }
+    }
+
+    // MQ
+    @include maxw($bp-tablet-bootstrap) {
+        flex-direction: column;
+    }
+}
+
+.why-us__inner {
+    padding-top: 12.2rem;
+}
+
+// .why-us__inner__left {
+//     margin-left: 7.2rem;
+// }
+
+.why-us__inner__title {
+    margin-bottom: 1.8rem;
+}
+
+// .why-us__inner__case:not(:first-child) {
+//     font-family:
+// }
+
+.why-us__inner__number {
+    margin-right: 3.2rem;
+}
+
+.why__us__inner__button {
+    font-family: $f-hk-grotesk;
+    font-size: 2.3rem;
+    line-height: 5.8rem;
+    color: $c-dusty-gray;
+}
+
+.why-us__inner__case:last-child {
+    padding-bottom: 7.5rem;
+
+    button {
+        color: $c-black;
+    }
+
+    span {
+        color: $c-royal-blue;
+    }
+}
+
+.why-us__inner__right {
+    padding-top: 12.2rem;
+
+    // MQ
+    @include maxw($bp-tablet-bootstrap) {
+        padding: 0;
+    }
+}
+
+.why-us__right__title {
+    margin-bottom: 3rem;
+}
+
+.why-us__right__body-strong {
+    margin-bottom: 5rem;
+}
+
+.why-us__right__body {
+    margin-bottom: 9.5rem;
+}
+
+.why-us__right__links {
+    display: flex;
+    margin-bottom: 14.8rem;
+}
+
+.why-us__right__button-read-more {
+    margin-right: 4.7rem;
+}
+
+.why-us__right__button-read-more,
+.why-us__right__button-download {
+    display: flex;
+    align-items: center;
+    position: relative;
+}

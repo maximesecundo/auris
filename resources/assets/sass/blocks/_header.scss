@@ -1,0 +1,58 @@
+/* HEADER
+---------------------------------------------------------------------------------------------------- */
+
+/* General
+--------------------------------------------------------- */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: $s-nav-height;
+    // margin-top: 6.5rem;
+    // margin-top: 6.5rem;
+}
+
+.header__title a {
+    display: flex;
+}
+
+.menu-btn {
+    position: relative;
+    margin-right: 3.39rem;
+
+    font-family: $f-lato;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    border: 0;
+}
+
+.menu-btn__icon {
+    position: absolute;
+    top: 0;
+    right: -3.39rem;
+    height: 100%;
+}
+
+.menu-btn__icon__bar {
+    position: absolute;
+    right: 0;
+    width: 1.8rem;
+    height: .225rem;
+
+    background: $c-black;
+
+    &:nth-child(1) {
+        top: .2rem;
+    }
+
+    &:nth-child(2) {
+        top: .8rem;
+    }
+
+    &:nth-child(3) {
+        top: 1.4rem;
+    }
+}
